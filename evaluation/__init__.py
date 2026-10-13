@@ -1,1 +1,1 @@
-"""CuRLRank-style evaluation pipeline for AnchorRank."""
+"""AnchorRank evaluation pipeline."""

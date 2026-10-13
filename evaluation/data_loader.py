@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 class AnchorRankEvalDataLoader:
-    """Loads the same local corpus/queries layout used by CuRLRank evaluation."""
+    """Loads AnchorRank's local corpus, query, and relevance files."""
 
     def __init__(self, dataset_dir: str):
         self.dataset_dir = Path(dataset_dir)

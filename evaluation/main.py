@@ -7,7 +7,7 @@ from .runner import AnchorRankEvalRunner
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="CuRLRank-style AnchorRank evaluation")
+    parser = argparse.ArgumentParser(description="AnchorRank evaluation")
     parser.add_argument("--dataset_dir", required=True)
     parser.add_argument("--retriever_results_dir", required=True)
     parser.add_argument("--reranker_results_dir", required=True)

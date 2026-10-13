@@ -6,7 +6,7 @@ from anchorrank import Document
 
 
 class AnchorRankEvalReranker:
-    """Consumes CuRLRank-format retrieval runs and replaces their scores."""
+    """Consumes retrieval runs and replaces their scores with AnchorRank scores."""
 
     def __init__(self, reranker, rerank_top_k: int = 100):
         self.reranker = reranker

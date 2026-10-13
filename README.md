@@ -1,13 +1,13 @@
 # AnchorRank: Towards Globally Consistent Relevance Scoring for Reasoning-Intensive Reranking
 
-This repository contains a partial research implementation of **AnchorRank**. It provides the core anchor-guided inference code and selected training/evaluation utilities, organized in the same style as CuRLRank.
+This repository contains a partial research implementation of **AnchorRank**. It provides the core anchor-guided inference code and selected training/evaluation utilities.
 
 > **Reproducibility Note**
 > This repository is intentionally a partial public release. Benchmark downloads, complete training data preparation, full model checkpoints, and the remaining reproduction scripts will be released after paper acceptance.
 
 ## 1. Environments
 
-The recommended environment follows the CuRLRank setup:
+The recommended environment is:
 
 ```text
 OS: Ubuntu 22.04+
@@ -31,7 +31,7 @@ The training configurations are intended to run in separate LLaMA-Factory and ve
 ```text
 AnchorRank/
 |- anchorrank/                  # Shared anchor construction and reranking logic
-|- evaluation/                  # CuRLRank-style evaluation entry points
+|- evaluation/                  # AnchorRank evaluation entry points
 |  |- main.py
 |  |- runner.py
 |  |- reranker_sglang.py
@@ -95,7 +95,7 @@ Training anchors are intentionally excluded, matching the paper's training strat
 
 ## 4. Evaluation
 
-The evaluation interface follows CuRLRank's local dataset and retrieval-result layout:
+The evaluation interface uses the following local dataset and retrieval-result layout:
 
 ```text
 data/text/<benchmark>/<dataset>/{corpus.jsonl,queries.jsonl,qrels.jsonl}
@@ -125,7 +125,7 @@ For the paper's model separation:
 - `--ae_anchor_model_name_or_path` points to Qwen3-8B for AE.
 - `--ga_anchor_model_name_or_path` points to the GPT-6 Luna teacher-model checkpoint or serving path for GA.
 
-The CuRLRank-style AnchorRank-P launch script is:
+The AnchorRank-P launch script is:
 
 ```bash
 bash evaluation/scripts/AnchorRank-P-7B.sh

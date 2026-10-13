@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 class CustomEvalRetriever:
-    """Loads precomputed retrieval results, as CuRLRank's custom retriever does."""
+    """Loads precomputed retrieval results."""
 
     @staticmethod
     def load(path: Path) -> dict[str, dict[str, float]]:

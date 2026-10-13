@@ -5,7 +5,7 @@ from anchorrank.sglang_backend import SGLangGenerator
 
 
 class SGLangAnchorRankReranker:
-    """AnchorRank model adapter, parallel to CuRLRank's SGLang reranker."""
+    """SGLang-backed AnchorRank model adapter."""
 
     def __init__(self, model_name_or_path: str, mode: str, anchor_strategy: str, ae_anchor_model_name_or_path: str, ga_anchor_model_name_or_path: str, anchor_top_k: int, window_size: int, context_length: int, tp_size: int, dp_size: int, random_seed: int, enable_thinking: bool, anchor_cache_path: str):
         self.model_name_or_path = model_name_or_path
