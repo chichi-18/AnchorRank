@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+anchors.json
+output/
+logs/
+model/
+*.safetensors
+*.bin
+*.pt
+*.pth

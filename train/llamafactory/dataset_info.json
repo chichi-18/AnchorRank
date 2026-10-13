@@ -1,0 +1,18 @@
+{
+  "anchorrank_pointwise_sft": {
+    "file_name": "anchorrank_pointwise_sft.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "anchorrank_listwise_sft": {
+    "file_name": "anchorrank_listwise_sft.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}

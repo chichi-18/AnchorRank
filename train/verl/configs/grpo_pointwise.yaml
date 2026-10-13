@@ -1,0 +1,25 @@
+# AnchorRank paper GRPO hyperparameters. Override paths at launch time.
+algorithm:
+  adv_estimator: grpo
+  use_kl_in_reward: false
+data:
+  train_batch_size: 64
+  max_prompt_length: 8192
+  max_response_length: 128
+  filter_overlong_prompts: true
+  truncation: error
+actor_rollout_ref:
+  actor:
+    optim:
+      lr: 1.0e-6
+    ppo_mini_batch_size: 4
+    ppo_micro_batch_size_per_gpu: 1
+    use_kl_loss: true
+    kl_loss_coef: 0.005
+  rollout:
+    name: vllm
+    n: 8
+    temperature: 1.0
+    max_model_len: 10240
+trainer:
+  total_epochs: 3
